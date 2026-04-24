@@ -247,15 +247,17 @@
 
   <div class="divider"></div>
   <div class="section-label">Schedule Events</div>
+  <div class="meeting-row" style="margin-bottom:10px;">
+    <input class="time-input" type="time" id="schedTime" style="flex:1; width:100%; min-width:0; padding:14px 10px; font-size: 16px;" />
+    <input class="meeting-input" id="schedMins" type="number" min="1" max="480" placeholder="Minutes..." style="flex:1;" />
+  </div>
   <div class="meeting-row" style="margin-bottom:12px;">
-    <input class="time-input" type="time" id="schedTime" style="flex:1; width:auto; min-width:0; padding:14px 10px;" />
-    <input class="meeting-input" id="schedMins" type="number" min="1" max="480" placeholder="Mins" style="flex:1;" />
-    <select class="meeting-input" id="schedType" style="flex:1; appearance:none; padding-right:10px;">
+    <select class="meeting-input" id="schedType" style="flex:1; appearance:none;">
       <option value="Break|☕">Break</option>
       <option value="Lunch|🍱">Lunch</option>
       <option value="Meeting|👥">Meeting</option>
     </select>
-    <button class="btn-meeting" onclick="addSchedEvent()">Add</button>
+    <button class="btn-meeting" onclick="addSchedEvent()" style="padding-left:24px; padding-right:24px;">Add Event</button>
   </div>
   <div id="schedList" class="log-list" style="margin-bottom:20px; max-height:none; background:transparent; padding:0; border:none; display:none;"></div>
 
